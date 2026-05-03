@@ -97,6 +97,11 @@ workflows:
         - configuration: Release
         - verbose_log: 'yes'
         - automatic_code_signing: "off"
+        - xcodebuild_options: |-
+            CODE_SIGN_IDENTITY="MANUAL"
+            PROVISIONING_PROFILE="a51aa59f-892e-4961-a9c5-6c65d1a82a31"
+            DEVELOPMENT_TEAM="4UT92WGGSF"
+            CODE_SIGN_IDENTITY="iPhone Distribution"
     - deploy-to-bitrise-io@2: {}
     triggers:
       push: []
