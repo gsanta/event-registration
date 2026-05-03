@@ -18,6 +18,7 @@ workflows:
         inputs:
         - command: install
     - save-npm-cache@1: {}
+    - restore-cocoapods-cache@3: {}
     - script@1:
         title: Expp prebuild
         inputs:
@@ -37,6 +38,7 @@ workflows:
             # bash ./path/to/script.sh
             # not just bash, e.g.:
             # ruby ./path/to/script.rb
+    - save-cocoapods-cache@1: {}
     - xcode-build-for-simulator@3:
         inputs:
         - configuration: release
@@ -66,6 +68,7 @@ workflows:
         inputs:
         - command: install
     - save-npm-cache@1: {}
+    - restore-cocoapods-cache@3: {}
     - script@1:
         title: Expo prebuild
         inputs:
@@ -85,6 +88,7 @@ workflows:
             # bash ./path/to/script.sh
             # not just bash, e.g.:
             # ruby ./path/to/script.rb
+    - save-cocoapods-cache@1: {}
     - xcode-archive@6:
         inputs:
         - project_path: ios/EventRegistration.xcworkspace
