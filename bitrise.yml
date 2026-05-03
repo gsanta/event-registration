@@ -95,7 +95,6 @@ workflows:
         inputs:
         - source_root_path: ios
     - save-cocoapods-cache@1: {}
-    - certificate-and-profile-installer@1: {}
     - xcode-archive@6:
         inputs:
         - project_path: ios/Event-Registration.xcworkspace
