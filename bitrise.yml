@@ -95,8 +95,7 @@ workflows:
         - scheme: EventRegistration
         - configuration: Release
         - verbose_log: 'yes'
-        - automatic_code_signing: apple-id
-        - export_development_team: DT2C2FZ7U2
+        - automatic_code_signing: "off"
     - deploy-to-bitrise-io@2: {}
     triggers:
       push: []
