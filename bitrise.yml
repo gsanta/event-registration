@@ -44,8 +44,8 @@ workflows:
             CODE_SIGN_IDENTITY=""
             CODE_SIGNING_REQUIRED=NO
             CODE_SIGNING_ALLOWED=NO
-        - project_path: ios/Event-Registration.xcworkspace
-        - scheme: Event-Registration
+        - project_path: ios/EventRegistration.xcworkspace
+        - scheme: EventRegistration
     - deploy-to-bitrise-io@2: {}
     triggers:
       push: []
@@ -87,8 +87,8 @@ workflows:
             # ruby ./path/to/script.rb
     - xcode-archive@6:
         inputs:
-        - project_path: ios/Event-Registration.xcworkspace
-        - scheme: Event-Registration
+        - project_path: ios/EventRegistration.xcworkspace
+        - scheme: EventRegistration
         - configuration: Release
         - verbose_log: 'yes'
         - automatic_code_signing: api-key
