@@ -90,6 +90,16 @@ workflows:
             # ruby ./path/to/script.rb
     - save-cocoapods-cache@1: {}
     - certificate-and-profile-installer@1: {}
+    - script@1:
+        title: Delete Bitrise Cert
+        inputs:
+        - content: >-
+            #!/usr/bin/env bash
+            set -e
+            set -o pipefail
+            set -x
+            # For some reason, xcode was choosing the Bitrise wildcard cert unless it is deleted.
+            sudo security delete-certificate -c 'Apple Development: Tooling Bot Bitrise'
     - xcode-archive@6:
         inputs:
         - project_path: ios/EventRegistration.xcworkspace
