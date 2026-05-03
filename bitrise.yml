@@ -93,7 +93,7 @@ workflows:
     - script@1:
         title: Delete Bitrise Cert
         inputs:
-        - content: >-
+        - content: |-
             #!/usr/bin/env bash
             set -e
             set -o pipefail
