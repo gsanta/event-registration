@@ -89,6 +89,7 @@ workflows:
             # not just bash, e.g.:
             # ruby ./path/to/script.rb
     - save-cocoapods-cache@1: {}
+    - certificate-and-profile-installer@1: {}
     - xcode-archive@6:
         inputs:
         - project_path: ios/EventRegistration.xcworkspace
