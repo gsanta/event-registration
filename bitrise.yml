@@ -49,8 +49,8 @@ workflows:
             CODE_SIGN_IDENTITY=""
             CODE_SIGNING_REQUIRED=NO
             CODE_SIGNING_ALLOWED=NO
-        - project_path: ios/BitriseExpo53Codepush.xcworkspace
-        - scheme: BitriseExpo53Codepush
+        - project_path: ios/Event-Registration.xcworkspace
+        - scheme: Event-Registration
     - deploy-to-bitrise-io@2: {}
     triggers:
       push: []
@@ -98,8 +98,8 @@ workflows:
     - certificate-and-profile-installer@1: {}
     - xcode-archive@6:
         inputs:
-        - project_path: ios/BitriseExpo53Codepush.xcworkspace
-        - scheme: BitriseExpo53Codepush
+        - project_path: ios/Event-Registration.xcworkspace
+        - scheme: Event-Registration
         - configuration: Release
         - verbose_log: 'yes'
         - xcodebuild_options: "CODE_SIGN_STYLE=\"Manual\"
