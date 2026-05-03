@@ -43,7 +43,9 @@ const withCustomSigning = (config, props = {}) => {
         }
         
         if (codeSignIdentity) {
-          buildConfig.buildSettings.CODE_SIGN_IDENTITY = codeSignIdentity;
+          buildConfig.buildSettings.CODE_SIGN_IDENTITY = codeSignIdentity.includes(" ")
+            ? `"${codeSignIdentity}"`
+            : codeSignIdentity;
         }
       }
     });
