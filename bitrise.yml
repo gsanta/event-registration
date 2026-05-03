@@ -102,11 +102,7 @@ workflows:
         - scheme: Event-Registration
         - configuration: Release
         - verbose_log: 'yes'
-        - xcodebuild_options: "CODE_SIGN_STYLE=\"Manual\"
-            PROVISIONING_PROFILE=\"595cccbe-9879-4f9d-bf98-83124dd03643\"
-            DEVELOPMENT_TEAM=\"DT2C2FZ7U2\"\ 
-
-            CODE_SIGN_IDENTITY=\"iPhone Developer\""
+        - automatic_code_signing: api-key
     - deploy-to-bitrise-io@2: {}
     triggers:
       push: []
