@@ -25,7 +25,7 @@ workflows:
             #!/usr/bin/env bash
             set -euo pipefail
             npx tsc --noEmit
-  dev-build:
+  android-dev-build:
     description: |
       Build a dev APK via Expo prebuild and android-build.
     steps:

@@ -3,7 +3,7 @@ format_version: '13'
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: react-native
 workflows:
-  ios_simulator:
+  ios-simulator:
     description: |
       Installs dependencies.
 
@@ -52,7 +52,7 @@ workflows:
     triggers:
       push: []
       pull_request: []
-  ios_dev:
+  ios-dev-build:
     status_report_name: Executing <target_id> for <project_title>
     description: |
       Installs dependencies.
@@ -111,7 +111,7 @@ workflows:
     - deploy-to-bitrise-io@2: {}
     triggers:
       push: []
-  android_dev:
+  
     status_report_name: Executing <target_id> for <project_title>
     description: |
       Installs dependencies.
