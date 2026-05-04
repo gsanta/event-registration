@@ -6,3 +6,12 @@ project_type: react-native
 include:
 - path: ios_yml/bitrise.yml
 - path: android_yml/bitrise.yml
+
+pipelines:
+  release:
+    workflows:
+      ios-dev-build: {}
+      android-dev-build: {}
+    triggers:
+      pull_request: []
+    status_report_name: Executing <target_id> for <project_title>
