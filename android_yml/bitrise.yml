@@ -25,11 +25,6 @@ workflows:
             #!/usr/bin/env bash
             set -euo pipefail
             npx tsc --noEmit
-    triggers:
-      push:
-      - branch: '*'
-      pull_request:
-      - target_branch: '*'
   dev-build:
     description: |
       Build a dev APK via Expo prebuild and android-build.
