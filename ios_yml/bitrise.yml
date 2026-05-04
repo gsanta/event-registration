@@ -4,6 +4,10 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: react-native
 workflows:
   ios-simulator:
+    meta:
+      bitrise.io:
+        stack: osx-xcode-26.4.x
+        machine_type_id: g2.mac.large
     description: |
       Installs dependencies.
 
@@ -53,6 +57,10 @@ workflows:
       push: []
       pull_request: []
   ios-dev-build:
+    meta:
+      bitrise.io:
+        stack: osx-xcode-26.4.x
+        machine_type_id: g2.mac.large
     status_report_name: Executing <target_id> for <project_title>
     description: |
       Installs dependencies.
@@ -111,10 +119,6 @@ workflows:
     - deploy-to-bitrise-io@2: {}
     triggers:
       push: []
-meta:
-  bitrise.io:
-    stack: osx-xcode-26.4.x
-    machine_type_id: g2.mac.large
 app:
   envs:
   - PLATFORM: all
